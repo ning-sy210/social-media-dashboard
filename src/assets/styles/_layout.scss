@@ -1,0 +1,19 @@
+.vc,
+.vcsb,
+.stack-hc {
+  display: flex;
+}
+
+.stack-hc {
+  flex-direction: column;
+}
+
+.vc,
+.vcsb,
+.stack-hc {
+  align-items: center;
+}
+
+.vcsb {
+  justify-content: space-between;
+}
