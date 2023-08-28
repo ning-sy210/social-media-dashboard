@@ -1,3 +1,30 @@
+@use "../../styles/abstracts" as *;
+
 .app {
   height: 100dvh;
+  position: relative;
+}
+
+.app-bg {
+  &--light {
+    background-color: $color-app-bg--light;
+  }
+
+  &--dark {
+    background-color: $color-app-bg--dark;
+  }
+
+  &__top {
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 184px;
+    border-radius: 0 0 16px 16px;
+
+    &--light {
+      background-color: $color-app-bg__top--light;
+    }
+    &--dark {
+      background-color: $color-app-bg__top--dark;
+    }
+  }
 }
