@@ -1,20 +1,28 @@
 .d-flex,
+.flex-sb,
 .vc,
 .vcsb,
-.stack-hc {
+.stack,
+.stack-hc,
+.stack-hcsb {
   display: flex;
 }
 
-.stack-hc {
+.stack,
+.stack-hc,
+.stack-hcsb {
   flex-direction: column;
 }
 
 .vc,
 .vcsb,
-.stack-hc {
+.stack-hc,
+.stack-hcsb {
   align-items: center;
 }
 
-.vcsb {
+.flex-sb,
+.vcsb,
+.stack-hcsb {
   justify-content: space-between;
 }

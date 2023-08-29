@@ -73,15 +73,17 @@ const DashboardSocialMainCard = ({
   }
 
   return (
-    <div className="sm-card sm-card--main stack-hc">
-      <div className="vcsb" style={{ columnGap: "8px" }}>
+    <div className="sm-card sm-card--main stack-hcsb">
+      <div className="platform-handle vcsb">
         {getPlatformIcon()}
         <span>@{username}</span>
       </div>
 
-      <div className="stack-hc" style={{ columnGap: "4px" }}>
-        <span>{formatCount(followerCount)}</span>
-        <span>followers</span>
+      <div className="follower-count-ctn stack-hc">
+        <span className="follower-count-ctn__count">
+          {formatCount(followerCount)}
+        </span>
+        <span className="follower-count-ctn__label">followers</span>
       </div>
 
       <div
