@@ -73,7 +73,9 @@ const DashboardSocialMainCard = ({
   }
 
   return (
-    <div className="sm-card sm-card--main stack-hcsb">
+    <div
+      className={`sm-card sm-card--main sm-card--main--${platform} stack-hcsb`}
+    >
       <div className="platform-handle vcsb">
         {getPlatformIcon()}
         <span>@{username}</span>

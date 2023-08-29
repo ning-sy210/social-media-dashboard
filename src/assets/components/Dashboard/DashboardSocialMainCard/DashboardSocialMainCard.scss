@@ -8,7 +8,21 @@
     width: 212px;
     height: 182px;
     padding: 26px 0 20px;
-    border-top: 0.24rem solid $color-primary--facebook;
+    border-top-width: 0.24rem;
+    border-top-style: solid;
+
+    $border-top-color-variants: (
+      "facebook": $color-primary--facebook,
+      "twitter": $color-primary--twitter,
+      "instagram": $color-primary--instagram,
+      "youtube": $color-primary--youtube,
+    );
+
+    @each $platform, $border-top-color in $border-top-color-variants {
+      &--#{$platform} {
+        border-top-color: $border-top-color;
+      }
+    }
   }
 }
 

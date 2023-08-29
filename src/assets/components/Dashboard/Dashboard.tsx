@@ -26,7 +26,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="d-flex">
+      <div className="flex-sb">
         {Object.entries(socialMediaData).map(([platform, accountInfo]) => (
           <DashboardSocialMainCard
             platform={platform}
