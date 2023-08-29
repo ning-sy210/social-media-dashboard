@@ -1,18 +1,19 @@
+import { createContext, useState } from "react";
+import Dashboard from "../Dashboard/Dashboard";
+
 import "./App.scss";
 
-import { useState, createContext } from "react";
-
-enum Theme {
+export enum Theme {
   LIGHT = "light",
   DARK = "dark",
 }
 
 type ThemeContextType = {
   theme: Theme;
-  setTheme: React.Dispatch<React.SetStateAction<Theme>>;
+  toggleTheme: () => void;
 };
 
-const ThemeContext = createContext<null | ThemeContextType>(null);
+export const ThemeContext = createContext<null | ThemeContextType>(null);
 
 const App = () => {
   const [theme, setTheme] = useState(Theme.LIGHT);
@@ -36,24 +37,8 @@ const App = () => {
     <div className={`app app-bg--${theme}`}>
       <div className={`app-bg__top app-bg__top--${theme}`}></div>
 
-      <ThemeContext.Provider value={{ theme: theme, setTheme: setTheme }}>
-        <main className="dashboard-content">
-          <div className={`header-text header-text--${theme} vcsb`}>
-            <div>
-              <h1>Social Media Dashboard</h1>
-              <span>Total Followers: 23,004</span>
-            </div>
-            <div className="theme-toggle vc">
-              <label>Dark Mode</label>
-              <input
-                title="theme-toggle"
-                type="checkbox"
-                checked={theme === Theme.DARK}
-                onClick={toggleTheme}
-              ></input>
-            </div>
-          </div>
-        </main>
+      <ThemeContext.Provider value={{ theme: theme, toggleTheme: toggleTheme }}>
+        <Dashboard />
       </ThemeContext.Provider>
     </div>
   );
