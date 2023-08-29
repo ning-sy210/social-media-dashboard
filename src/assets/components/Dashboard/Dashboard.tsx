@@ -2,12 +2,14 @@ import { useContext } from "react";
 import { Theme, ThemeContext } from "../App/App";
 
 import "./Dashboard.scss";
+import DashboardSocialMainCard from "./DashboardSocialMainCard/DashboardSocialMainCard";
+import { socialMediaData } from "../../data";
 
 const Dashboard = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <main className="dashboard-content">
+    <main className="dashboard-content stack">
       <div className={`header-text header-text--${theme} vcsb`}>
         <div>
           <h1>Social Media Dashboard</h1>
@@ -16,12 +18,23 @@ const Dashboard = () => {
         <div className="theme-toggle vc">
           <label>Dark Mode</label>
           <input
-            title="theme-toggle"
+            title="Toggle theme"
             type="checkbox"
             checked={theme === Theme.DARK}
             onClick={toggleTheme}
           ></input>
         </div>
+      </div>
+
+      <div className="d-flex">
+        {Object.entries(socialMediaData).map(([platform, accountInfo]) => (
+          <DashboardSocialMainCard
+            platform={platform}
+            username={accountInfo.username}
+            followerCount={accountInfo.followers.count}
+            followerCountChange={accountInfo.followers.countChange}
+          />
+        ))}
       </div>
     </main>
   );

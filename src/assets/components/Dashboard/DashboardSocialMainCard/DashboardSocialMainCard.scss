@@ -1,0 +1,32 @@
+@use "../../../styles/abstracts" as *;
+
+.sm-card {
+  border-radius: 4px;
+  background-color: $color-card-bg--light;
+
+  &--main {
+    padding: 16px 28px 8px;
+  }
+}
+
+.count-change-text {
+  column-gap: 2px;
+
+  img {
+    width: 5px;
+    height: 3px;
+  }
+
+  span {
+    font-size: 0.5rem;
+    font-weight: 700;
+  }
+
+  &--rise {
+    color: $color-primary--lime-green;
+  }
+
+  &--fall {
+    color: $color-primary--bright-red;
+  }
+}
