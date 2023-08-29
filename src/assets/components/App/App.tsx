@@ -13,7 +13,10 @@ type ThemeContextType = {
   toggleTheme: () => void;
 };
 
-export const ThemeContext = createContext<null | ThemeContextType>(null);
+export const ThemeContext = createContext<ThemeContextType>({
+  theme: Theme.LIGHT,
+  toggleTheme: () => {},
+});
 
 const App = () => {
   const [theme, setTheme] = useState(Theme.LIGHT);

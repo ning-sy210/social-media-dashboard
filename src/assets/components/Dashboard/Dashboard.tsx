@@ -4,8 +4,7 @@ import { Theme, ThemeContext } from "../App/App";
 import "./Dashboard.scss";
 
 const Dashboard = () => {
-  const theme = useContext(ThemeContext)?.theme;
-  const toggleTheme = useContext(ThemeContext)?.toggleTheme;
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <main className="dashboard-content">
