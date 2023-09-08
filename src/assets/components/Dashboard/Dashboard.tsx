@@ -12,7 +12,7 @@ const Dashboard = () => {
     <div className="dashboard-content-ctn stack-hc">
       <main className="dashboard-content stack">
         <div className={`header-text header-text--${theme} vcsb`}>
-          <div>
+          <div className="stack" style={{ rowGap: "4px" }}>
             <h1 className="h2">Social Media Dashboard</h1>
             <span className="h4">Total Followers: 23,004</span>
           </div>
