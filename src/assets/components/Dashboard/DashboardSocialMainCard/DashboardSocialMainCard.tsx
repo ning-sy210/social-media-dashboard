@@ -95,8 +95,7 @@ const DashboardSocialMainCard = ({
         className={`count-change-text count-change-text--${countChangeTextClassname} vc h5`}
       >
         {getChangeIcon()}
-        <span>{Math.abs(followerCountChange)}</span>
-        <span>Today</span>
+        <span>{Math.abs(followerCountChange)} Today</span>
       </div>
     </div>
   );
