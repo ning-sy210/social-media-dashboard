@@ -1,13 +1,14 @@
-import FacebookIcon from "../../../images/icon-facebook.svg";
-import { SocialMedia } from "../../../data";
+import { useContext } from "react";
 
+import FacebookIcon from "../../../images/icon-facebook.svg";
 import InstagramIcon from "../../../images/icon-instagram.svg";
 import TwitterIcon from "../../../images/icon-twitter.svg";
 import YoutubeIcon from "../../../images/icon-youtube.svg";
-
 import DownIcon from "../../../images/icon-down.svg";
 import UpIcon from "../../../images/icon-up.svg";
 
+import { ThemeContext } from "../../App/App";
+import { SocialMedia } from "../../../data";
 import "./DashboardSocialMainCard.scss";
 
 type DashboardSocialMainCardType = {
@@ -23,6 +24,7 @@ const DashboardSocialMainCard = ({
   followerCount,
   followerCountChange,
 }: DashboardSocialMainCardType) => {
+  const theme = useContext(ThemeContext).theme;
   const countChangeTextClassname = followerCountChange >= 0 ? "rise" : "fall";
 
   function getPlatformIcon() {
@@ -73,11 +75,9 @@ const DashboardSocialMainCard = ({
   }
 
   return (
-    <div
-      className={`sm-card sm-card--main sm-card--main--${platform} stack-hc`}
-    >
+    <div className={`sm-card sm-card--main sm-card--theme-${theme} stack-hc`}>
       <div
-        className={`gradient-top-border gradient-top-border--${platform}`}
+        className={`gradient-top-border gradient-top-border--platform-${platform}`}
       ></div>
       <div className="platform-handle vcsb">
         {getPlatformIcon()}

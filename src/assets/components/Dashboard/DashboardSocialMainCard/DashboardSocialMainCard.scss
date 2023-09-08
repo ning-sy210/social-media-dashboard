@@ -7,6 +7,26 @@
   &--main {
     padding-bottom: 36px;
   }
+
+  &--theme-light {
+    background-color: $color-card-bg--light;
+    color: $color-text-2--light;
+
+    .platform-handle > span,
+    .follower-count-ctn__label {
+      color: $color-text-1--light;
+    }
+  }
+
+  &--theme-dark {
+    background-color: $color-card-bg--dark;
+    color: $color-text-2--dark;
+
+    .platform-handle > span,
+    .follower-count-ctn__label {
+      color: $color-text-1--dark;
+    }
+  }
 }
 
 .gradient-top-border {
@@ -24,7 +44,7 @@
   );
 
   @each $platform, $border-top-color in $border-top-color-variants {
-    &--#{$platform} {
+    &--platform-#{$platform} {
       background: $border-top-color;
     }
   }
@@ -42,7 +62,6 @@
 
   > span {
     font-weight: 700;
-    color: $color-text-1--light;
   }
 }
 
@@ -57,7 +76,6 @@
 
   &__label {
     text-transform: uppercase;
-    color: $color-text-1--light;
     letter-spacing: 0.23rem;
   }
 }
