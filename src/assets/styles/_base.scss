@@ -7,3 +7,18 @@
 #root {
   font-family: "Inter", sans-serif;
 }
+
+$heading-font-sizes: (
+  "h1": 2.94rem,
+  "h2": 2.5rem,
+  "h3": 1.52rem,
+  "h4": 1rem,
+  "h5": 0.6rem,
+  "h6": 0.5rem,
+);
+
+@each $heading, $font-size in $heading-font-sizes {
+  .#{$heading} {
+    font-size: $font-size;
+  }
+}
