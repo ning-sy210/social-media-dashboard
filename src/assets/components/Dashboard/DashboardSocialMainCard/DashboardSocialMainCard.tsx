@@ -74,7 +74,7 @@ const DashboardSocialMainCard = ({
 
   return (
     <div
-      className={`sm-card sm-card--main sm-card--main--${platform} stack-hcsb`}
+      className={`sm-card sm-card--main sm-card--main--${platform} stack-hc`}
     >
       <div className="platform-handle vcsb">
         {getPlatformIcon()}
@@ -85,7 +85,7 @@ const DashboardSocialMainCard = ({
         <span className="follower-count-ctn__count h1">
           {formatCount(followerCount)}
         </span>
-        <span className="follower-count-ctn__label h5">followers</span>
+        <span className="follower-count-ctn__label h4">followers</span>
       </div>
 
       <div

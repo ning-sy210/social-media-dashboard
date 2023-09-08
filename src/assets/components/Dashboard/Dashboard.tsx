@@ -27,7 +27,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="auto-grid" style={{ gap: "16px 32px" }}>
+        <div className="auto-grid" style={{ gap: "32px 40px" }}>
           {Object.entries(socialMediaData).map(([platform, accountInfo]) => (
             <DashboardSocialMainCard
               platform={platform}
