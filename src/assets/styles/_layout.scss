@@ -1,5 +1,4 @@
 .d-flex,
-.flex-sb,
 .vc,
 .vcsb,
 .stack,
@@ -21,8 +20,12 @@
   align-items: center;
 }
 
-.flex-sb,
 .vcsb,
 .stack-hcsb {
   justify-content: space-between;
+}
+
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
 }

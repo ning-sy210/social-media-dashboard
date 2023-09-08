@@ -1,10 +1,14 @@
 @use "../../styles/abstracts" as *;
 
-.dashboard-content {
-  width: 100%;
+.dashboard-content-ctn {
+  padding-top: 48px;
   position: absolute;
   z-index: 1;
-  padding: 32px 136px 48px;
+  width: 100%;
+}
+
+.dashboard-content {
+  width: 85%;
   row-gap: 36px;
 }
 
