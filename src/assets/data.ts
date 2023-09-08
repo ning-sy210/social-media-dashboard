@@ -5,13 +5,13 @@ export enum SocialMedia {
   YOUTUBE = "youtube",
 }
 
-const facebookData = {
+export const facebookData = {
   username: "nathanf",
   followers: {
     count: 1987,
     countChange: 12,
   },
-  views: {
+  pageViews: {
     count: 87,
     percentageChange: 3,
   },
@@ -21,7 +21,7 @@ const facebookData = {
   },
 };
 
-const twitterData = {
+export const twitterData = {
   username: "nathanf",
   followers: {
     count: 1044,
@@ -37,13 +37,13 @@ const twitterData = {
   },
 };
 
-const instagramData = {
+export const instagramData = {
   username: "realnathanf",
   followers: {
     count: 11000,
     countChange: 1099,
   },
-  views: {
+  profileViews: {
     count: 52000,
     percentageChange: 1375,
   },
@@ -53,13 +53,13 @@ const instagramData = {
   },
 };
 
-const youtubeData = {
+export const youtubeData = {
   username: "Nathan F.",
   followers: {
     count: 8239,
     countChange: -144,
   },
-  views: {
+  totalViews: {
     count: 1407,
     percentageChange: -12,
   },

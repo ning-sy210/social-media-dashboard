@@ -1,14 +1,10 @@
 import { useContext } from "react";
+import { ThemeContext } from "../../App/App";
 
-import FacebookIcon from "../../../images/icon-facebook.svg";
-import InstagramIcon from "../../../images/icon-instagram.svg";
-import TwitterIcon from "../../../images/icon-twitter.svg";
-import YoutubeIcon from "../../../images/icon-youtube.svg";
 import DownIcon from "../../../images/icon-down.svg";
 import UpIcon from "../../../images/icon-up.svg";
 
-import { ThemeContext } from "../../App/App";
-import { SocialMedia } from "../../../data";
+import { getPlatformIcon } from "../Dashboard";
 import "./DashboardSocialMainCard.scss";
 
 type DashboardSocialMainCardType = {
@@ -26,38 +22,6 @@ const DashboardSocialMainCard = ({
 }: DashboardSocialMainCardType) => {
   const theme = useContext(ThemeContext).theme;
   const countChangeTextClassname = followerCountChange >= 0 ? "rise" : "fall";
-
-  function getPlatformIcon() {
-    let imgSrc = "";
-    let imgAlt = "";
-
-    switch (platform) {
-      case SocialMedia.FACEBOOK:
-        imgSrc = FacebookIcon;
-        imgAlt = "Facebook Icon";
-        break;
-
-      case SocialMedia.TWITTER:
-        imgSrc = TwitterIcon;
-        imgAlt = "Twitter Icon";
-        break;
-
-      case SocialMedia.INSTAGRAM:
-        imgSrc = InstagramIcon;
-        imgAlt = "Instagram Icon";
-        break;
-
-      case SocialMedia.YOUTUBE:
-        imgSrc = YoutubeIcon;
-        imgAlt = "Youtube Icon";
-        break;
-
-      default:
-        return;
-    }
-
-    return <img src={imgSrc} alt={imgAlt} />;
-  }
 
   function getChangeIcon() {
     let imgSrc = "";
@@ -80,7 +44,7 @@ const DashboardSocialMainCard = ({
         className={`gradient-top-border gradient-top-border--platform-${platform}`}
       ></div>
       <div className="platform-handle vcsb">
-        {getPlatformIcon()}
+        {getPlatformIcon(platform)}
         <span className="h5">@{username}</span>
       </div>
 

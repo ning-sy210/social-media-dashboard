@@ -3,10 +3,75 @@ import { Theme, ThemeContext } from "../App/App";
 
 import "./Dashboard.scss";
 import DashboardSocialMainCard from "./DashboardSocialMainCard/DashboardSocialMainCard";
-import { socialMediaData } from "../../data";
+import {
+  SocialMedia,
+  facebookData,
+  instagramData,
+  socialMediaData,
+  twitterData,
+  youtubeData,
+} from "../../data";
+import DashboardSocialOverviewCard, {
+  DashboardSocialOverviewCardProps,
+} from "./DashboardSocialOverviewCard/DashboardSocialOverviewCard";
+
+import FacebookIcon from "../../../assets/images/icon-facebook.svg";
+import InstagramIcon from "../../../assets/images/icon-instagram.svg";
+import TwitterIcon from "../../../assets/images/icon-twitter.svg";
+import YoutubeIcon from "../../../assets/images/icon-youtube.svg";
 
 const Dashboard = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const overviewCards: DashboardSocialOverviewCardProps[] = [
+    {
+      platform: SocialMedia.FACEBOOK,
+      metricLabel: "Page Views",
+      currCount: facebookData.pageViews.count,
+      percentageChange: facebookData.pageViews.percentageChange,
+    },
+    {
+      platform: SocialMedia.FACEBOOK,
+      metricLabel: "Likes",
+      currCount: facebookData.likes.count,
+      percentageChange: facebookData.likes.percentageChange,
+    },
+    {
+      platform: SocialMedia.INSTAGRAM,
+      metricLabel: "Likes",
+      currCount: instagramData.likes.count,
+      percentageChange: instagramData.likes.percentageChange,
+    },
+    {
+      platform: SocialMedia.INSTAGRAM,
+      metricLabel: "Profile Views",
+      currCount: instagramData.profileViews.count,
+      percentageChange: instagramData.profileViews.percentageChange,
+    },
+    {
+      platform: SocialMedia.TWITTER,
+      metricLabel: "Retweets",
+      currCount: twitterData.retweets.count,
+      percentageChange: twitterData.retweets.percentageChange,
+    },
+    {
+      platform: SocialMedia.TWITTER,
+      metricLabel: "Likes",
+      currCount: twitterData.likes.count,
+      percentageChange: twitterData.likes.percentageChange,
+    },
+    {
+      platform: SocialMedia.YOUTUBE,
+      metricLabel: "Likes",
+      currCount: youtubeData.likes.count,
+      percentageChange: youtubeData.likes.percentageChange,
+    },
+    {
+      platform: SocialMedia.YOUTUBE,
+      metricLabel: "Total Views",
+      currCount: youtubeData.totalViews.count,
+      percentageChange: youtubeData.totalViews.percentageChange,
+    },
+  ];
 
   return (
     <div className="dashboard-content-ctn stack-hc">
@@ -27,7 +92,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="auto-grid" style={{ gap: "32px 40px" }}>
+        <div className="auto-grid auto-grid--sm-card-ctn">
           {Object.entries(socialMediaData).map(([platform, accountInfo]) => (
             <DashboardSocialMainCard
               platform={platform}
@@ -37,9 +102,55 @@ const Dashboard = () => {
             />
           ))}
         </div>
+
+        <div className="overview-section">
+          <h2>Overview - Today</h2>
+          <div className="auto-grid auto-grid--sm-card-ctn">
+            {overviewCards.map((card) => (
+              <DashboardSocialOverviewCard
+                platform={card.platform}
+                metricLabel={card.metricLabel}
+                currCount={card.currCount}
+                percentageChange={card.percentageChange}
+              />
+            ))}
+          </div>
+        </div>
       </main>
     </div>
   );
 };
+
+export function getPlatformIcon(platform: string) {
+  let imgSrc = "";
+  let imgAlt = "";
+
+  switch (platform) {
+    case SocialMedia.FACEBOOK:
+      imgSrc = FacebookIcon;
+      imgAlt = "Facebook Icon";
+      break;
+
+    case SocialMedia.TWITTER:
+      imgSrc = TwitterIcon;
+      imgAlt = "Twitter Icon";
+      break;
+
+    case SocialMedia.INSTAGRAM:
+      imgSrc = InstagramIcon;
+      imgAlt = "Instagram Icon";
+      break;
+
+    case SocialMedia.YOUTUBE:
+      imgSrc = YoutubeIcon;
+      imgAlt = "Youtube Icon";
+      break;
+
+    default:
+      return;
+  }
+
+  return <img src={imgSrc} alt={imgAlt} />;
+}
 
 export default Dashboard;
