@@ -10,21 +10,21 @@
 
   &--theme-light {
     background-color: $color-card-bg--light;
-    color: $color-text-2--light;
+    color: $color-text-main--light;
 
     .platform-handle > span,
     .follower-count-ctn__label {
-      color: $color-text-1--light;
+      color: $color-text-sub--light;
     }
   }
 
   &--theme-dark {
     background-color: $color-card-bg--dark;
-    color: $color-text-2--dark;
+    color: $color-text-main--dark;
 
     .platform-handle > span,
     .follower-count-ctn__label {
-      color: $color-text-1--dark;
+      color: $color-text-sub--dark;
     }
   }
 }
