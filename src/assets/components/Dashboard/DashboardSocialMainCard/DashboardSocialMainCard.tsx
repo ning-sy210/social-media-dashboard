@@ -76,6 +76,9 @@ const DashboardSocialMainCard = ({
     <div
       className={`sm-card sm-card--main sm-card--main--${platform} stack-hc`}
     >
+      <div
+        className={`gradient-top-border gradient-top-border--${platform}`}
+      ></div>
       <div className="platform-handle vcsb">
         {getPlatformIcon()}
         <span className="h5">@{username}</span>
