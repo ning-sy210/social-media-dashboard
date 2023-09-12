@@ -45,18 +45,18 @@ const DashboardSocialMainCard = ({
       ></div>
       <div className="platform-handle vcsb">
         {getPlatformIcon(platform)}
-        <span className="h5">@{username}</span>
+        <span className="h5 bold">@{username}</span>
       </div>
 
       <div className="follower-count-ctn stack-hc">
-        <span className="follower-count-ctn__count h1">
+        <span className="follower-count-ctn__count h1 bold">
           {formatCount(followerCount)}
         </span>
         <span className="follower-count-ctn__label h4">followers</span>
       </div>
 
       <div
-        className={`count-change-text count-change-text--${countChangeTextClassname} vc h5`}
+        className={`count-change-text count-change-text--${countChangeTextClassname} vc h5 bold`}
       >
         {getChangeIcon()}
         <span>{Math.abs(followerCountChange)} Today</span>

@@ -52,13 +52,8 @@
 
   > img {
     $icon-dimension: 1.5rem;
-
     width: $icon-dimension;
     height: $icon-dimension;
-  }
-
-  > span {
-    font-weight: 700;
   }
 }
 
@@ -67,7 +62,6 @@
   margin-top: 20px;
 
   &__count {
-    font-weight: 700;
     letter-spacing: -0.1rem;
   }
 
@@ -84,10 +78,6 @@
   > img {
     width: 0.7rem;
     height: 0.4rem;
-  }
-
-  > span {
-    font-weight: 700;
   }
 
   &--rise {

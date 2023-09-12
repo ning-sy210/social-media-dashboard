@@ -14,12 +14,6 @@
 }
 
 .header-text {
-  h1,
-  span,
-  label {
-    font-weight: 700;
-  }
-
   &--light {
     h1 {
       color: $color-text-main--light;

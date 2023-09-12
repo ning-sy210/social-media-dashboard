@@ -78,11 +78,11 @@ const Dashboard = () => {
       <main className="dashboard-content stack">
         <div className={`header-text header-text--${theme} vcsb`}>
           <div className="stack" style={{ rowGap: "4px" }}>
-            <h1 className="h2">Social Media Dashboard</h1>
-            <span className="h4">Total Followers: 23,004</span>
+            <h1 className="h2 bold">Social Media Dashboard</h1>
+            <span className="h4 bold">Total Followers: 23,004</span>
           </div>
           <div className="theme-toggle vc">
-            <label className="h4">Dark Mode</label>
+            <label className="h4 bold">Dark Mode</label>
             <input
               title="Toggle theme"
               type="checkbox"
