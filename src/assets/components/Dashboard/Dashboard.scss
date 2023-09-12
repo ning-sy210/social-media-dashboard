@@ -18,8 +18,9 @@
     h1 {
       color: $color-text-main--light;
     }
-    span,
-    label {
+
+    .follower-count-text,
+    .dark-mode-label {
       color: $color-text-sub--light;
     }
   }
@@ -28,8 +29,9 @@
     h1 {
       color: $color-text-main--dark;
     }
-    span,
-    label {
+
+    .follower-count-text,
+    .dark-mode-label {
       color: $color-text-sub--dark;
     }
   }
@@ -41,4 +43,18 @@
 
 .auto-grid--sm-card-ctn {
   gap: 32px 40px;
+}
+
+.overview-section {
+  row-gap: 24px;
+}
+
+.overview-text {
+  &--light {
+    color: $color-text-sub--light;
+  }
+
+  &--dark {
+    color: $color-text-sub--dark;
+  }
 }

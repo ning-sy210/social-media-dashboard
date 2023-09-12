@@ -1,5 +1,43 @@
+import FacebookIcon from "../../../images/icon-facebook.svg";
+import InstagramIcon from "../../../images/icon-instagram.svg";
+import TwitterIcon from "../../../images/icon-twitter.svg";
+import YoutubeIcon from "../../../images/icon-youtube.svg";
+
 import UpIcon from "../../../images/icon-up.svg";
 import DownIcon from "../../../images/icon-down.svg";
+import { SocialMedia } from "../../../data";
+
+export function getPlatformIcon(platform: string) {
+  let imgSrc = "";
+  let imgAlt = "";
+
+  switch (platform) {
+    case SocialMedia.FACEBOOK:
+      imgSrc = FacebookIcon;
+      imgAlt = "Facebook";
+      break;
+
+    case SocialMedia.TWITTER:
+      imgSrc = TwitterIcon;
+      imgAlt = "Twitter";
+      break;
+
+    case SocialMedia.INSTAGRAM:
+      imgSrc = InstagramIcon;
+      imgAlt = "Instagram";
+      break;
+
+    case SocialMedia.YOUTUBE:
+      imgSrc = YoutubeIcon;
+      imgAlt = "Youtube";
+      break;
+
+    default:
+      return;
+  }
+
+  return <img src={imgSrc} alt={`${imgAlt} Icon`} />;
+}
 
 export function getChangeIcon(change: number) {
   let imgSrc = "";
@@ -7,13 +45,13 @@ export function getChangeIcon(change: number) {
 
   if (change >= 0) {
     imgSrc = UpIcon;
-    imgAlt = "Increase Icon";
+    imgAlt = "Increase";
   } else {
     imgSrc = DownIcon;
-    imgAlt = "Decrease Icon";
+    imgAlt = "Decrease";
   }
 
-  return <img src={imgSrc} alt={imgAlt} />;
+  return <img src={imgSrc} alt={`${imgAlt} Icon`} />;
 }
 
 export function formatCount(count: number) {

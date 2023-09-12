@@ -15,11 +15,6 @@ import DashboardSocialOverviewCard, {
   DashboardSocialOverviewCardProps,
 } from "./DashboardSocialOverviewCard/DashboardSocialOverviewCard";
 
-import FacebookIcon from "../../../assets/images/icon-facebook.svg";
-import InstagramIcon from "../../../assets/images/icon-instagram.svg";
-import TwitterIcon from "../../../assets/images/icon-twitter.svg";
-import YoutubeIcon from "../../../assets/images/icon-youtube.svg";
-
 const Dashboard = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const overviewCards: DashboardSocialOverviewCardProps[] = [
@@ -79,10 +74,12 @@ const Dashboard = () => {
         <div className={`header-text header-text--${theme} vcsb`}>
           <div className="stack" style={{ rowGap: "4px" }}>
             <h1 className="h2 bold">Social Media Dashboard</h1>
-            <span className="h4 bold">Total Followers: 23,004</span>
+            <span className="follower-count-text h4 bold">
+              Total Followers: 23,004
+            </span>
           </div>
           <div className="theme-toggle vc">
-            <label className="h4 bold">Dark Mode</label>
+            <p className="dark-mode-label h4 bold">Dark Mode</p>
             <input
               title="Toggle theme"
               type="checkbox"
@@ -103,8 +100,8 @@ const Dashboard = () => {
           ))}
         </div>
 
-        <div className="overview-section">
-          <h2>Overview - Today</h2>
+        <div className="overview-section stack">
+          <h2 className={`overview-text--${theme} h3`}>Overview - Today</h2>
           <div className="auto-grid auto-grid--sm-card-ctn">
             {overviewCards.map((card) => (
               <DashboardSocialOverviewCard
@@ -120,37 +117,5 @@ const Dashboard = () => {
     </div>
   );
 };
-
-export function getPlatformIcon(platform: string) {
-  let imgSrc = "";
-  let imgAlt = "";
-
-  switch (platform) {
-    case SocialMedia.FACEBOOK:
-      imgSrc = FacebookIcon;
-      imgAlt = "Facebook Icon";
-      break;
-
-    case SocialMedia.TWITTER:
-      imgSrc = TwitterIcon;
-      imgAlt = "Twitter Icon";
-      break;
-
-    case SocialMedia.INSTAGRAM:
-      imgSrc = InstagramIcon;
-      imgAlt = "Instagram Icon";
-      break;
-
-    case SocialMedia.YOUTUBE:
-      imgSrc = YoutubeIcon;
-      imgAlt = "Youtube Icon";
-      break;
-
-    default:
-      return;
-  }
-
-  return <img src={imgSrc} alt={imgAlt} />;
-}
 
 export default Dashboard;

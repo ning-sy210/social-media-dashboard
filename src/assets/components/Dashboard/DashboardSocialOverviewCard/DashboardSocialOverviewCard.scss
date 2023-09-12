@@ -1,0 +1,46 @@
+@use "../../../styles/abstracts" as *;
+
+.sm-overview-card {
+  border-radius: 8px;
+  padding: 24px 32px;
+  row-gap: 24px;
+
+  &--theme-light {
+    background-color: $color-card-bg--light;
+    color: $color-text-main--light;
+
+    .metric-label {
+      color: $color-text-sub--light;
+    }
+  }
+
+  &--theme-dark {
+    background-color: $color-card-bg--dark;
+    color: $color-text-main--dark;
+
+    .metric-label {
+      color: $color-text-sub--dark;
+    }
+  }
+}
+
+.heading-row > img {
+  $length: 1.5rem;
+  width: $length;
+  height: $length;
+}
+
+.percentage-change-text {
+  > img {
+    width: 0.7rem;
+    height: 0.4rem;
+  }
+
+  &--rise {
+    color: $color-primary--lime-green;
+  }
+
+  &--fall {
+    color: $color-primary--bright-red;
+  }
+}

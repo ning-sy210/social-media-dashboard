@@ -1,6 +1,7 @@
 .d-flex,
 .vc,
 .vcsb,
+.aesb,
 .stack,
 .stack-hc,
 .stack-hcsb {
@@ -20,9 +21,14 @@
   align-items: center;
 }
 
+.aesb,
 .vcsb,
 .stack-hcsb {
   justify-content: space-between;
+}
+
+.aesb {
+  align-items: end;
 }
 
 .auto-grid {
