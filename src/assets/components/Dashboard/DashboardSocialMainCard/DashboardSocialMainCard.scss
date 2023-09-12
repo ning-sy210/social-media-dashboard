@@ -1,7 +1,29 @@
 @use "../../../styles/abstracts" as *;
 
-.sm-card--main {
+.sm-main-card {
   padding-bottom: 36px;
+  border-radius: 8px;
+  background-color: $color-card-bg--light;
+
+  &--theme-light {
+    background-color: $color-card-bg--light;
+    color: $color-text-main--light;
+
+    .platform-handle > span,
+    .follower-count-ctn__label {
+      color: $color-text-sub--light;
+    }
+  }
+
+  &--theme-dark {
+    background-color: $color-card-bg--dark;
+    color: $color-text-main--dark;
+
+    .platform-handle > span,
+    .follower-count-ctn__label {
+      color: $color-text-sub--dark;
+    }
+  }
 }
 
 .gradient-top-border {

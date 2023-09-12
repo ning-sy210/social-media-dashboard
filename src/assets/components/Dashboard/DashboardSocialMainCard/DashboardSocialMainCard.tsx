@@ -39,7 +39,7 @@ const DashboardSocialMainCard = ({
   }
 
   return (
-    <div className={`sm-card sm-card--main sm-card--theme-${theme} stack-hc`}>
+    <div className={`sm-main-card sm-main-card--theme-${theme} stack-hc`}>
       <div
         className={`gradient-top-border gradient-top-border--platform-${platform}`}
       ></div>
