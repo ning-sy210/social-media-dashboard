@@ -10,11 +10,10 @@
 
 $heading-font-sizes: (
   "h1": 4rem,
-  "h2": 2.6rem,
-  "h3": 1.5rem,
+  "h2": 1.94rem,
+  "h3": 1.7rem,
   "h4": 1rem,
-  "h5": 0.9rem,
-  "h6": 0.5rem,
+  "h5": 0.875rem,
 );
 
 @each $heading, $font-size in $heading-font-sizes {
