@@ -89,7 +89,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="auto-grid auto-grid--sm-card-ctn">
+        <div className="auto-grid auto-grid--main-card-ctn">
           {Object.entries(socialMediaData).map(([platform, accountInfo]) => (
             <DashboardSocialMainCard
               platform={platform}
@@ -102,7 +102,7 @@ const Dashboard = () => {
 
         <div className="overview-section stack">
           <h2 className={`overview-text--${theme} h3`}>Overview - Today</h2>
-          <div className="auto-grid auto-grid--sm-card-ctn">
+          <div className="auto-grid auto-grid--overview-card-ctn">
             {overviewCards.map((card) => (
               <DashboardSocialOverviewCard
                 platform={card.platform}

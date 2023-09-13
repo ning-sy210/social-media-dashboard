@@ -1,7 +1,7 @@
 @use "../../styles/abstracts" as *;
 
 .dashboard-content-ctn {
-  padding-top: 48px;
+  padding: 48px 0 56px;
   position: absolute;
   z-index: 1;
   width: 100%;
@@ -9,7 +9,7 @@
 
 .dashboard-content {
   width: 85%;
-  max-width: 1464px;
+  max-width: 1288px;
   row-gap: 56px;
 }
 
@@ -41,8 +41,14 @@
   column-gap: 8px;
 }
 
-.auto-grid--sm-card-ctn {
-  gap: 32px 40px;
+.auto-grid {
+  &--main-card-ctn {
+    gap: 32px 40px;
+  }
+
+  &--overview-card-ctn {
+    gap: 16px 40px;
+  }
 }
 
 .overview-section {
