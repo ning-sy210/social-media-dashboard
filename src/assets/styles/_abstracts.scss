@@ -23,11 +23,15 @@ $color-toggle--light: hsl(230, 22%, 74%);
 $color-app-bg__top--dark: hsl(230, 17%, 14%);
 $color-app-bg--dark: hsl(232, 19%, 15%);
 $color-card-bg--dark: hsl(228, 28%, 20%);
+$color-card-bg-hover--dark: hsl(229deg 29% 26%);
+$color-card-bg-active--dark: hsl(229deg 30% 17%);
 $color-text-main--dark: $color-white;
 $color-text-sub--dark: hsl(228, 34%, 66%);
 
 $color-app-bg__top--light: hsl(225, 100%, 98%);
 $color-app-bg--light: $color-white;
 $color-card-bg--light: hsl(227, 47%, 96%);
+$color-card-bg-hover--light: hsl(228deg 32% 92%);
+$color-card-bg-active--light: hsl(226deg 27% 87%);
 $color-text-main--light: hsl(230, 17%, 14%);
 $color-text-sub--light: hsl(228, 12%, 44%);

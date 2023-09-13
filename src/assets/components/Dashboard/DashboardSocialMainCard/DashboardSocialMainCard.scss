@@ -3,7 +3,7 @@
 .sm-main-card {
   padding-bottom: 36px;
   border-radius: 8px;
-  background-color: $color-card-bg--light;
+  cursor: pointer;
 
   &--theme-light {
     background-color: $color-card-bg--light;
@@ -12,6 +12,14 @@
     .platform-handle > span,
     .follower-count-ctn__label {
       color: $color-text-sub--light;
+    }
+
+    &:hover {
+      background-color: $color-card-bg-hover--light;
+    }
+
+    &:active {
+      background-color: $color-card-bg-active--light;
     }
   }
 
@@ -22,6 +30,14 @@
     .platform-handle > span,
     .follower-count-ctn__label {
       color: $color-text-sub--dark;
+    }
+
+    &:hover {
+      background-color: $color-card-bg-hover--dark;
+    }
+
+    &:active {
+      background-color: $color-card-bg-active--dark;
     }
   }
 }

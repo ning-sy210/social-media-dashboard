@@ -4,6 +4,7 @@
   border-radius: 8px;
   padding: 24px 32px;
   row-gap: 24px;
+  cursor: pointer;
 
   &--theme-light {
     background-color: $color-card-bg--light;
@@ -11,6 +12,14 @@
 
     .metric-label {
       color: $color-text-sub--light;
+    }
+
+    &:hover {
+      background-color: $color-card-bg-hover--light;
+    }
+
+    &:active {
+      background-color: $color-card-bg-active--light;
     }
   }
 
@@ -20,6 +29,14 @@
 
     .metric-label {
       color: $color-text-sub--dark;
+    }
+
+    &:hover {
+      background-color: $color-card-bg-hover--dark;
+    }
+
+    &:active {
+      background-color: $color-card-bg-active--dark;
     }
   }
 }
