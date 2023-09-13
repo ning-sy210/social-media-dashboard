@@ -43,7 +43,7 @@ const App = () => {
   return (
     <div
       className={`app app-bg--${theme}`}
-      style={{ height: `${contentHeight}px` }}
+      style={{ height: `max(100dvh, ${contentHeight}px)` }}
     >
       <div className={`app-bg__top app-bg__top--${theme}`}></div>
 
