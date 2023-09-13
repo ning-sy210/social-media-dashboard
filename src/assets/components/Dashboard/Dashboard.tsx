@@ -79,8 +79,11 @@ const Dashboard = () => {
               Total Followers: 23,004
             </span>
           </div>
-          <div className="theme-toggle vc" style={{ columnGap: "12px" }}>
-            <label htmlFor="theme-toggle-btn" className="dark-mode-label h4 bold">
+          <div className="toggle-ctn vc" style={{ columnGap: "12px" }}>
+            <label
+              htmlFor="theme-toggle-btn"
+              className="dark-mode-label h4 bold"
+            >
               Dark Mode
             </label>
             <Toggle
