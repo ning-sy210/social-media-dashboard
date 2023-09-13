@@ -13,7 +13,11 @@ $color-primary--instagram: linear-gradient(
 );
 $color-primary--youtube: hsl(348, 97%, 39%);
 
-$color-toggle--dark: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$color-toggle--dark: linear-gradient(
+  to right,
+  hsl(210, 78%, 56%),
+  hsl(146, 68%, 55%)
+);
 $color-toggle--light: hsl(230, 22%, 74%);
 
 $color-app-bg__top--dark: hsl(230, 17%, 14%);

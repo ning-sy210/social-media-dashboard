@@ -14,6 +14,7 @@ import {
 import DashboardSocialOverviewCard, {
   DashboardSocialOverviewCardProps,
 } from "./DashboardSocialOverviewCard/DashboardSocialOverviewCard";
+import Toggle from "../common/Toggle";
 
 const Dashboard = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -78,14 +79,18 @@ const Dashboard = () => {
               Total Followers: 23,004
             </span>
           </div>
-          <div className="theme-toggle vc">
-            <p className="dark-mode-label h4 bold">Dark Mode</p>
-            <input
-              title="Toggle theme"
-              type="checkbox"
+          <div className="theme-toggle vc" style={{ columnGap: "12px" }}>
+            <label htmlFor="theme-toggle-btn" className="dark-mode-label h4 bold">
+              Dark Mode
+            </label>
+            <Toggle
+              id="theme-toggle-btn"
+              classname={`theme-toggle-btn--theme-${theme}`}
+              title="Toggle Theme"
+              includeIcons={false}
               checked={theme === Theme.DARK}
-              onClick={toggleTheme}
-            ></input>
+              onChange={toggleTheme}
+            />
           </div>
         </div>
 
