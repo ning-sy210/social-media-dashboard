@@ -70,7 +70,7 @@
     $space: 24px;
 
     flex-direction: column;
-    align-items: start !important;
+    align-items: stretch !important;
     row-gap: $space;
 
     .h2 {
@@ -79,7 +79,6 @@
 
     .toggle-ctn {
       padding-top: $space;
-      width: 100%;
       justify-content: space-between;
     }
 
