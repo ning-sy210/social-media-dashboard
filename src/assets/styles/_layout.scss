@@ -1,0 +1,37 @@
+.d-flex,
+.vc,
+.vcsb,
+.aesb,
+.stack,
+.stack-hc,
+.stack-hcsb {
+  display: flex;
+}
+
+.stack,
+.stack-hc,
+.stack-hcsb {
+  flex-direction: column;
+}
+
+.vc,
+.vcsb,
+.stack-hc,
+.stack-hcsb {
+  align-items: center;
+}
+
+.aesb,
+.vcsb,
+.stack-hcsb {
+  justify-content: space-between;
+}
+
+.aesb {
+  align-items: end;
+}
+
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+}

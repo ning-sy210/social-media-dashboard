@@ -1,0 +1,106 @@
+@use "../../../styles/abstracts" as *;
+
+.sm-main-card {
+  padding-bottom: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &--theme-light {
+    background-color: $color-card-bg--light;
+    color: $color-text-main--light;
+
+    .platform-handle > span,
+    .follower-count-ctn__label {
+      color: $color-text-sub--light;
+    }
+
+    &:hover {
+      background-color: $color-card-bg-hover--light;
+    }
+
+    &:active {
+      background-color: $color-card-bg-active--light;
+    }
+  }
+
+  &--theme-dark {
+    background-color: $color-card-bg--dark;
+    color: $color-text-main--dark;
+
+    .platform-handle > span,
+    .follower-count-ctn__label {
+      color: $color-text-sub--dark;
+    }
+
+    &:hover {
+      background-color: $color-card-bg-hover--dark;
+    }
+
+    &:active {
+      background-color: $color-card-bg-active--dark;
+    }
+  }
+}
+
+.gradient-top-border {
+  width: 100%;
+  height: 5px;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  margin-bottom: 36px;
+
+  $border-top-color-variants: (
+    "facebook": $color-primary--facebook,
+    "twitter": $color-primary--twitter,
+    "instagram": $color-primary--instagram,
+    "youtube": $color-primary--youtube,
+  );
+
+  @each $platform, $border-top-color in $border-top-color-variants {
+    &--platform-#{$platform} {
+      background: $border-top-color;
+    }
+  }
+}
+
+.platform-handle {
+  column-gap: 8px;
+
+  > img {
+    $icon-dimension: 1.5rem;
+    width: $icon-dimension;
+    height: $icon-dimension;
+  }
+}
+
+.follower-count-ctn {
+  column-gap: 4px;
+  margin-top: 20px;
+
+  &__count {
+    letter-spacing: -0.1rem;
+  }
+
+  &__label {
+    text-transform: uppercase;
+    letter-spacing: 0.23rem;
+  }
+}
+
+.count-change-text {
+  column-gap: 8px;
+  margin-top: 32px;
+
+  > img {
+    width: 0.7rem;
+    height: 0.4rem;
+  }
+
+  &--rise {
+    color: $color-primary--lime-green;
+  }
+
+  &--fall {
+    color: $color-primary--bright-red;
+  }
+}
