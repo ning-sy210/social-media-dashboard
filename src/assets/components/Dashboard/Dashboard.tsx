@@ -70,6 +70,7 @@ const Dashboard = () => {
   ];
 
   return (
+    // update App.tsx if 'dashboard-content-ctn' classname is changed!
     <div className="dashboard-content-ctn stack-hc">
       <main className="dashboard-content stack">
         <div className={`header-text header-text--${theme} vcsb`}>

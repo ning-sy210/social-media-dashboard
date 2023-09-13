@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import Dashboard from "../Dashboard/Dashboard";
 
 import "./App.scss";
@@ -21,6 +21,10 @@ export const ThemeContext = createContext<ThemeContextType>({
 const App = () => {
   const [theme, setTheme] = useState(Theme.LIGHT);
 
+  const contentHeight = document.querySelector(
+    ".dashboard-content-ctn"
+  )?.scrollHeight;
+
   function toggleTheme() {
     switch (theme) {
       case Theme.LIGHT:
@@ -37,7 +41,10 @@ const App = () => {
   }
 
   return (
-    <div className={`app app-bg--${theme}`}>
+    <div
+      className={`app app-bg--${theme}`}
+      style={{ height: `${contentHeight}px` }}
+    >
       <div className={`app-bg__top app-bg__top--${theme}`}></div>
 
       <ThemeContext.Provider value={{ theme: theme, toggleTheme: toggleTheme }}>
