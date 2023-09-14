@@ -32,10 +32,13 @@ const App = () => {
 
   return (
     <div
-      className={`app app-bg--${theme}`}
-      style={{ height: `max(100dvh, ${contentHeight}px)` }}
+      className={`app-bg--theme-${theme}`}
+      style={{
+        position: "relative",
+        height: `max(100dvh, ${contentHeight}px)`,
+      }}
     >
-      <div className={`app-bg__top app-bg__top--${theme}`}></div>
+      <div className="app-top-bg"></div>
 
       <ThemeContext.Provider value={{ theme: theme, toggleTheme: toggleTheme }}>
         <Dashboard />
