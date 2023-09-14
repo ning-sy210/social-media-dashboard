@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { ThemeContext } from "../app/App";
 
-import SocialMainCard from "../social-main-card/SocialMainCard";
+import SocialMainCard from "./social-main-card/SocialMainCard";
 import SocialOverviewCard, {
   SocialOverviewCardProps,
-} from "../social-overview-card/SocialOverviewCard";
+} from "./social-overview-card/SocialOverviewCard";
 import DashboardHeader from "./dashboard-header/DashboardHeader";
 
 import {

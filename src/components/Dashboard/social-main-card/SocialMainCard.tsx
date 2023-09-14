@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import { ThemeContext } from "../app/App";
+import { ThemeContext } from "../../app/App";
 
 import {
   formatCount,
   getChangeIcon,
   getPlatformIcon,
-} from "../../util/functions";
+} from "../../../util/functions";
 import "./SocialMainCard.scss";
 
 type SocialMainCardType = {
