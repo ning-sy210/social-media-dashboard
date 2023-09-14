@@ -7,21 +7,21 @@ import {
   getChangeIcon,
   getPlatformIcon,
 } from "../../util/functions";
-import "./DashboardSocialOverviewCard.scss";
+import "./SocialOverviewCard.scss";
 
-export type DashboardSocialOverviewCardProps = {
+export type SocialOverviewCardProps = {
   platform: string;
   metricLabel: string;
   currCount: number;
   percentageChange: number;
 };
 
-const DashboardSocialOverviewCard = ({
+const SocialOverviewCard = ({
   platform,
   metricLabel,
   currCount,
   percentageChange,
-}: DashboardSocialOverviewCardProps) => {
+}: SocialOverviewCardProps) => {
   const theme = useContext(ThemeContext).theme;
   const textCn = percentageChange >= 0 ? "rise" : "fall";
 
@@ -46,4 +46,4 @@ const DashboardSocialOverviewCard = ({
   );
 };
 
-export default DashboardSocialOverviewCard;
+export default SocialOverviewCard;

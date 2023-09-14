@@ -11,14 +11,14 @@ import {
   twitterData,
   youtubeData,
 } from "../../assets/data";
-import DashboardSocialOverviewCard, {
-  DashboardSocialOverviewCardProps,
-} from "../social-overview-card/DashboardSocialOverviewCard";
+import SocialOverviewCard, {
+  SocialOverviewCardProps,
+} from "../social-overview-card/SocialOverviewCard";
 import Toggle from "../common/toggle/Toggle";
 
 const Dashboard = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
-  const overviewCards: DashboardSocialOverviewCardProps[] = [
+  const overviewCards: SocialOverviewCardProps[] = [
     {
       platform: SocialMedia.FACEBOOK,
       metricLabel: "Page Views",
@@ -113,7 +113,7 @@ const Dashboard = () => {
           <h2 className={`overview-text--${theme} h3`}>Overview - Today</h2>
           <div className="auto-grid auto-grid--overview-card-ctn">
             {overviewCards.map((card) => (
-              <DashboardSocialOverviewCard
+              <SocialOverviewCard
                 platform={card.platform}
                 metricLabel={card.metricLabel}
                 currCount={card.currCount}
