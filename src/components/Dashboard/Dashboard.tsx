@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { Theme, ThemeContext } from "../App/App";
+import { Theme, ThemeContext } from "../app/App";
 
 import "./Dashboard.scss";
-import DashboardSocialMainCard from "../DashboardSocialMainCard/DashboardSocialMainCard";
+import DashboardSocialMainCard from "../social-main-card/DashboardSocialMainCard";
 import {
   SocialMedia,
   facebookData,
@@ -13,7 +13,7 @@ import {
 } from "../../assets/data";
 import DashboardSocialOverviewCard, {
   DashboardSocialOverviewCardProps,
-} from "../DashboardSocialOverviewCard/DashboardSocialOverviewCard";
+} from "../social-overview-card/DashboardSocialOverviewCard";
 import Toggle from "../common/toggle/Toggle";
 
 const Dashboard = () => {

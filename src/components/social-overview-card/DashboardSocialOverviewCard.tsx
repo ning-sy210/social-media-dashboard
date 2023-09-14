@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import { ThemeContext } from "../App/App";
+import { ThemeContext } from "../app/App";
 
 import {
   formatCount,
