@@ -1,12 +1,11 @@
 import { useContext } from "react";
-
 import { ThemeContext } from "../app/App";
+
 import {
   formatCount,
   getChangeIcon,
   getPlatformIcon,
 } from "../../util/functions";
-
 import "./SocialMainCard.scss";
 
 type SocialMainCardType = {
@@ -27,26 +26,24 @@ const SocialMainCard = ({
 
   return (
     <div className={`sm-main-card sm-main-card--theme-${theme} stack-hc`}>
-      <div
-        className={`gradient-top-border gradient-top-border--platform-${platform}`}
-      ></div>
+      <div className={`top-border top-border--platform-${platform}`}></div>
       <div className="platform-handle vcsb">
         {getPlatformIcon(platform)}
-        <span className="h5 bold">@{username}</span>
+        <p className="platform-handle__username h5 bold">@{username}</p>
       </div>
 
       <div className="follower-count-ctn stack-hc">
-        <span className="follower-count-ctn__count h1 bold">
+        <p className="follower-count-ctn__count h1 bold">
           {formatCount(followerCount)}
-        </span>
-        <span className="follower-count-ctn__label h4">followers</span>
+        </p>
+        <p className="follower-count-ctn__label h4">followers</p>
       </div>
 
       <div
         className={`count-change-text count-change-text--${countChangeTextClassname} vc h5 bold`}
       >
         {getChangeIcon(followerCountChange)}
-        <span>{Math.abs(followerCountChange)} Today</span>
+        <p>{Math.abs(followerCountChange)} Today</p>
       </div>
     </div>
   );
