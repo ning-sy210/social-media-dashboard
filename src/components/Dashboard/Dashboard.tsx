@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Theme, ThemeContext } from "../app/App";
 
 import "./Dashboard.scss";
-import DashboardSocialMainCard from "../social-main-card/DashboardSocialMainCard";
+import SocialMainCard from "../social-main-card/SocialMainCard";
 import {
   SocialMedia,
   facebookData,
@@ -100,7 +100,7 @@ const Dashboard = () => {
 
         <div className="auto-grid auto-grid--main-card-ctn">
           {Object.entries(socialMediaData).map(([platform, accountInfo]) => (
-            <DashboardSocialMainCard
+            <SocialMainCard
               platform={platform}
               username={accountInfo.username}
               followerCount={accountInfo.followers.count}

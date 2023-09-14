@@ -7,21 +7,21 @@ import {
   getPlatformIcon,
 } from "../../util/functions";
 
-import "./DashboardSocialMainCard.scss";
+import "./SocialMainCard.scss";
 
-type DashboardSocialMainCardType = {
+type SocialMainCardType = {
   platform: string;
   username: string;
   followerCount: number;
   followerCountChange: number;
 };
 
-const DashboardSocialMainCard = ({
+const SocialMainCard = ({
   platform,
   username,
   followerCount,
   followerCountChange,
-}: DashboardSocialMainCardType) => {
+}: SocialMainCardType) => {
   const theme = useContext(ThemeContext).theme;
   const countChangeTextClassname = followerCountChange >= 0 ? "rise" : "fall";
 
@@ -52,4 +52,4 @@ const DashboardSocialMainCard = ({
   );
 };
 
-export default DashboardSocialMainCard;
+export default SocialMainCard;
