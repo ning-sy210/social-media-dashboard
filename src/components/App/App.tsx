@@ -21,23 +21,13 @@ export const ThemeContext = createContext<ThemeContextType>({
 const App = () => {
   const [theme, setTheme] = useState(Theme.LIGHT);
 
+  // for adjusting height of app according to a `position: absolute` child
   const contentHeight = document.querySelector(
     ".dashboard-content-ctn"
   )?.scrollHeight;
 
   function toggleTheme() {
-    switch (theme) {
-      case Theme.LIGHT:
-        setTheme(Theme.DARK);
-        break;
-
-      case Theme.DARK:
-        setTheme(Theme.LIGHT);
-        break;
-
-      default:
-        break;
-    }
+    return theme === Theme.LIGHT ? setTheme(Theme.DARK) : setTheme(Theme.LIGHT);
   }
 
   return (
