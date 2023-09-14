@@ -1,0 +1,62 @@
+@use "../../../styles/abstracts" as *;
+
+.header-text {
+  &--light {
+    .dashboard-heading {
+      color: $color-text-main--light;
+    }
+
+    .follower-count-text,
+    .dark-mode-label {
+      color: $color-text-sub--light;
+    }
+  }
+
+  &--dark {
+    .dashboard-heading {
+      color: $color-text-main--dark;
+    }
+
+    .follower-count-text,
+    .dark-mode-label {
+      color: $color-text-sub--dark;
+    }
+
+    .toggle-ctn:hover .dark-mode-label {
+      color: $color-white;
+    }
+  }
+}
+
+@media (max-width: $bp--tablet) {
+  .header-text {
+    $space: 24px;
+
+    flex-direction: column;
+    align-items: stretch !important;
+    row-gap: $space;
+
+    .h2 {
+      font-size: 1.69rem;
+    }
+
+    .toggle-ctn {
+      padding-top: $space;
+      justify-content: space-between;
+    }
+
+    &--light .toggle-ctn {
+      border-top: 1px solid black;
+    }
+
+    &--dark .toggle-ctn {
+      border-top: 1px solid $color-text-sub--dark;
+    }
+  }
+}
+
+@media (max-width: $bp--mobile-m) {
+  .header-text .h2 {
+    font-size: 1.4rem;
+  }
+}
