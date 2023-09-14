@@ -1,8 +1,12 @@
 import { useContext } from "react";
 
-import { ThemeContext } from "../../App/App";
+import { ThemeContext } from "../App/App";
 
-import { formatCount, getChangeIcon, getPlatformIcon } from "../util/functions";
+import {
+  formatCount,
+  getChangeIcon,
+  getPlatformIcon,
+} from "../../util/functions";
 import "./DashboardSocialOverviewCard.scss";
 
 export type DashboardSocialOverviewCardProps = {
