@@ -80,6 +80,7 @@ const Dashboard = () => {
         <div className="auto-grid auto-grid--main-card-ctn">
           {Object.entries(socialMediaData).map(([platform, accountInfo]) => (
             <SocialMainCard
+              key={`${platform}-main`}
               platform={platform}
               username={accountInfo.username}
               followerCount={accountInfo.followers.count}
@@ -93,6 +94,7 @@ const Dashboard = () => {
           <div className="auto-grid auto-grid--overview-card-ctn">
             {overviewCards.map((card) => (
               <SocialOverviewCard
+                key={`${card.platform}-overview--${card.metricLabel}`}
                 platform={card.platform}
                 metricLabel={card.metricLabel}
                 currCount={card.currCount}
