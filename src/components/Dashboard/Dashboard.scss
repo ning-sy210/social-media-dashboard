@@ -1,0 +1,38 @@
+@use "../../styles/abstracts" as *;
+
+.dashboard-content-ctn {
+  padding: 48px 0;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+
+.dashboard-content {
+  width: 85%;
+  max-width: 1288px;
+  row-gap: 56px;
+}
+
+.auto-grid {
+  &--main-card-ctn {
+    gap: 32px 40px;
+  }
+
+  &--overview-card-ctn {
+    gap: 16px 40px;
+  }
+}
+
+.overview-section {
+  row-gap: 24px;
+}
+
+.overview-text {
+  &--light {
+    color: $color-text-sub--light;
+  }
+
+  &--dark {
+    color: $color-text-sub--dark;
+  }
+}

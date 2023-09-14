@@ -1,11 +1,11 @@
-import FacebookIcon from "../../../images/icon-facebook.svg";
-import InstagramIcon from "../../../images/icon-instagram.svg";
-import TwitterIcon from "../../../images/icon-twitter.svg";
-import YoutubeIcon from "../../../images/icon-youtube.svg";
+import FacebookIcon from "../assets/images/icon-facebook.svg";
+import InstagramIcon from "../assets/images/icon-instagram.svg";
+import TwitterIcon from "../assets/images/icon-twitter.svg";
+import YoutubeIcon from "../assets/images/icon-youtube.svg";
 
-import UpIcon from "../../../images/icon-up.svg";
-import DownIcon from "../../../images/icon-down.svg";
-import { SocialMedia } from "../../../data";
+import UpIcon from "../assets/images/icon-up.svg";
+import DownIcon from "../assets/images/icon-down.svg";
+import { SocialMedia } from "../assets/data";
 
 export function getPlatformIcon(platform: string) {
   let imgSrc = "";
