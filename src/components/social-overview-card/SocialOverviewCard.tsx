@@ -1,5 +1,4 @@
 import { useContext } from "react";
-
 import { ThemeContext } from "../app/App";
 
 import {
@@ -23,7 +22,7 @@ const SocialOverviewCard = ({
   percentageChange,
 }: SocialOverviewCardProps) => {
   const theme = useContext(ThemeContext).theme;
-  const textCn = percentageChange >= 0 ? "rise" : "fall";
+  const percentageChangeTextClassname = percentageChange >= 0 ? "rise" : "fall";
 
   return (
     <div className={`sm-overview-card sm-overview-card--theme-${theme} stack`}>
@@ -33,13 +32,13 @@ const SocialOverviewCard = ({
       </div>
 
       <div className="aesb bold">
-        <span className="h3">{formatCount(currCount)}</span>
+        <p className="h3">{formatCount(currCount)}</p>
         <div
-          className={`percentage-change-text--${textCn} vcsb`}
+          className={`percentage-change-text--${percentageChangeTextClassname} vcsb`}
           style={{ columnGap: "4px" }}
         >
           {getChangeIcon(percentageChange)}
-          <span className="h5">{Math.abs(percentageChange)}%</span>
+          <p className="h5">{Math.abs(percentageChange)}%</p>
         </div>
       </div>
     </div>
