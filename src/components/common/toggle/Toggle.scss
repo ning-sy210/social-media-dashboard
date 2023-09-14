@@ -1,5 +1,10 @@
 @use "../../../styles/abstracts" as *;
 
+/**
+ * Contains CSS for react-toggle, orginal file at:
+ * https://raw.githubusercontent.com/instructure-react/react-toggle/master/style.css
+ */
+
 .react-toggle {
   touch-action: pan-x;
 
@@ -108,7 +113,6 @@
   left: 1px;
   width: 22px;
   height: 22px;
-  border: 1px solid #4d4d4d;
   border-radius: 50%;
   background-color: #fafafa;
 
@@ -123,13 +127,6 @@
 
 .react-toggle--checked .react-toggle-thumb {
   left: 27px;
-  border-color: #19ab27;
-}
-
-.react-toggle--focus .react-toggle-thumb {
-  -webkit-box-shadow: 0px 0px 3px 2px #0099e0;
-  -moz-box-shadow: 0px 0px 3px 2px #0099e0;
-  box-shadow: 0px 0px 2px 3px #0099e0;
 }
 
 .react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
