@@ -213,7 +213,7 @@ Another important consideration is that we are only concerning ourselves with tw
 
 Another thing I was excited to learn about is a CSS magic trick which achieves responsiveness without use of any media queries. This line of CSS is the one I am referring to:
 
-```css
+```scss
 .auto-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(272px, 1fr)); // this one!
