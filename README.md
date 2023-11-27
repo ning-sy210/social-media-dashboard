@@ -20,10 +20,7 @@ Actual: 2 weeks
   - [What I learned](#what-i-learned)
     - [SASS](#sass)
     - [Auto-grid Layout](#auto-grid-layout)
-  - [Continued Development](#continued-development)
   - [Useful Resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
