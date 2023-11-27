@@ -1,13 +1,18 @@
 @use "../../styles/abstracts" as *;
 
 .app-bg {
-  &--theme-light,
-  &--theme-light .app-top-bg {
+  &--theme-light {
     background-color: $color-app-bg--light;
   }
-  &--theme-dark,
-  &--theme-dark .app-top-bg {
+  &--theme-light .app-top-bg {
+    background-color: $color-app-bg__top--light;
+  }
+
+  &--theme-dark {
     background-color: $color-app-bg--dark;
+  }
+  &--theme-dark .app-top-bg {
+    background-color: $color-app-bg__top--dark;
   }
 }
 
