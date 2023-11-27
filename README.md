@@ -207,7 +207,7 @@ As compared to the vanilla CSS equivalent below:
 
 Even though there is little difference in the number of lines written to achieve the same style, I believe SASS makes it way less verbose by removing the need for repeated declaration of common base (parent) classes.
 
-Another important consideration is that we are only concerning ourselves with two themes here. If there are multiple themes that need to be supported in the application, the vanilla CSS file would grow in character count very quickly, whereas all that needs to be done in SASS is to simply extend the `$theme-colors` mapping values. Also, if a certain variable name needs to be changed, the name can also be quickly altered in the map and `@each` loop without fear of missing out on a few, causing things to unintentionally break. These reasons are what I think makes SASS a very scalable solution, even for projects at scale.
+Another important consideration is that we are only concerning ourselves with two themes here. If there are multiple themes that need to be supported in the application, the vanilla CSS file would grow in character count very quickly, whereas all that needs to be done in SASS is to simply extend the `$theme-colors` mapping values. Also, if a certain variable name needs to be changed, the name can also be quickly altered in the map and `@each` loop without fear of missing out on a few. These reasons are what I think makes SASS a very scalable solution, even for projects at scale.
 
 #### Auto-grid Layout
 
