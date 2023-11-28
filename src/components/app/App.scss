@@ -3,16 +3,18 @@
 .app-bg {
   &--theme-light {
     background-color: $color-app-bg--light;
-  }
-  &--theme-light .app-top-bg {
-    background-color: $color-app-bg__top--light;
+
+    .app-top-bg {
+      background-color: $color-app-bg__top--light;
+    }
   }
 
   &--theme-dark {
     background-color: $color-app-bg--dark;
-  }
-  &--theme-dark .app-top-bg {
-    background-color: $color-app-bg__top--dark;
+    
+    .app-top-bg {
+      background-color: $color-app-bg__top--dark;
+    }
   }
 }
 
