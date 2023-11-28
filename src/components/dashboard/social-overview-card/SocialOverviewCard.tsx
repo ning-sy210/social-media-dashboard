@@ -25,13 +25,13 @@ const SocialOverviewCard = ({
   const percentageChangeTextClassname = percentageChange >= 0 ? "rise" : "fall";
 
   return (
-    <div className={`sm-overview-card sm-overview-card--theme-${theme} stack`}>
-      <div className="heading-row vcsb">
+    <section className={`sm-overview-card sm-overview-card--theme-${theme} stack`}>
+      <section className="heading-row vcsb">
         <p className="metric-label h5 bold">{metricLabel}</p>
         {getPlatformIcon(platform)}
-      </div>
+      </section>
 
-      <div className="aesb bold">
+      <section className="aesb bold">
         <p className="h3">{formatCount(currCount)}</p>
         <div
           className={`percentage-change-text--${percentageChangeTextClassname} vcsb`}
@@ -40,8 +40,8 @@ const SocialOverviewCard = ({
           {getChangeIcon(percentageChange)}
           <p className="h5">{Math.abs(percentageChange)}%</p>
         </div>
-      </div>
-    </div>
+      </section>
+    </section>
   );
 };
 
