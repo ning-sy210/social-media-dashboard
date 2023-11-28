@@ -25,27 +25,27 @@ const SocialMainCard = ({
   const countChangeTextClassname = followerCountChange >= 0 ? "rise" : "fall";
 
   return (
-    <div className={`sm-main-card sm-main-card--theme-${theme} stack-hc`}>
+    <section className={`sm-main-card sm-main-card--theme-${theme} stack-hc`}>
       <div className={`top-border top-border--platform-${platform}`}></div>
-      <div className="platform-handle vcsb">
+      <section className="platform-handle vcsb">
         {getPlatformIcon(platform)}
         <p className="platform-handle__username h5 bold">@{username}</p>
-      </div>
+      </section>
 
-      <div className="follower-count-ctn stack-hc">
+      <section className="follower-count-ctn stack-hc">
         <p className="follower-count-ctn__count h1 bold">
           {formatCount(followerCount)}
         </p>
         <p className="follower-count-ctn__label h4">followers</p>
-      </div>
+      </section>
 
-      <div
+      <section
         className={`count-change-text count-change-text--${countChangeTextClassname} vc h5 bold`}
       >
         {getChangeIcon(followerCountChange)}
         <p>{Math.abs(followerCountChange)} Today</p>
-      </div>
-    </div>
+      </section>
+    </section>
   );
 };
 

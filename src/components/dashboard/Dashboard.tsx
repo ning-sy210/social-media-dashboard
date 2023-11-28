@@ -77,7 +77,7 @@ const Dashboard = () => {
       <main className="dashboard-content stack">
         <DashboardHeader />
 
-        <div className="auto-grid auto-grid--main-card-ctn">
+        <section className="auto-grid auto-grid--main-card-ctn">
           {Object.entries(socialMediaData).map(([platform, accountInfo]) => (
             <SocialMainCard
               key={`${platform}-main`}
@@ -87,11 +87,11 @@ const Dashboard = () => {
               followerCountChange={accountInfo.followers.countChange}
             />
           ))}
-        </div>
+        </section>
 
-        <div className="overview-section stack">
+        <section className="overview-section stack">
           <h2 className={`overview-text--${theme} h3`}>Overview - Today</h2>
-          <div className="auto-grid auto-grid--overview-card-ctn">
+          <section className="auto-grid auto-grid--overview-card-ctn">
             {overviewCards.map((card) => (
               <SocialOverviewCard
                 key={`${card.platform}-overview--${card.metricLabel}`}
@@ -101,8 +101,8 @@ const Dashboard = () => {
                 percentageChange={card.percentageChange}
               />
             ))}
-          </div>
-        </div>
+          </section>
+        </section>
       </main>
     </div>
   );

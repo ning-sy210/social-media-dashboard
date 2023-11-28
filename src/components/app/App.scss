@@ -11,7 +11,7 @@
 
   &--theme-dark {
     background-color: $color-app-bg--dark;
-    
+
     .app-top-bg {
       background-color: $color-app-bg__top--dark;
     }
@@ -19,9 +19,6 @@
 }
 
 .app-top-bg {
-  position: absolute;
-  inset: 0 0 auto 0;
   height: 296px;
   border-radius: 0 0 16px 16px;
-  z-index: 0;
 }
